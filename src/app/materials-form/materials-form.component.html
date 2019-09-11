@@ -1,0 +1,64 @@
+<app-header></app-header>
+<div class="main">
+<mat-card>
+<div class="header">
+  
+    <div class="formAlignmemnt">
+    <mat-form-field >
+      <mat-label> Customer Name</mat-label>
+        <mat-select placeholder="Customer Name" [formControl]="cname" required="true">
+          <mat-option value="Select Customer Name">--Select Name--</mat-option>
+          <mat-option value="ABC">ABC</mat-option>
+          <mat-option value="DEF">DEF</mat-option>
+        </mat-select>
+        <mat-error *ngIf="cname.invalid">{{getCNameErrorMessage()}}</mat-error>
+      </mat-form-field>  
+      <mat-form-field >
+          <mat-label>Project Name</mat-label>
+          <input matInput placeholder="Project Name" [formControl]="pname" required>
+          <mat-error *ngIf="pname.invalid">{{getPNameErrorMessage()}}</mat-error>
+        </mat-form-field>  
+        <mat-form-field >
+          <mat-label>Location</mat-label>
+            <mat-select placeholder="Select Location" [formControl]="location" required>
+              <mat-option value="Select Location">--Select Location--</mat-option>
+              <mat-option value="ABC">Mumbai</mat-option>
+              <mat-option value="DEF">Delhi</mat-option>
+            </mat-select>
+            <mat-error *ngIf="location.invalid">{{getLocationErrorMessage()}}</mat-error>
+          </mat-form-field>  
+          <mat-form-field >
+            <mat-label>Project Engineer</mat-label>
+              <mat-select placeholder="Project Engineer" [formControl]="pe" required>
+                <mat-option value="Select Project Engineer">--Select Project Engineer--</mat-option>
+                <mat-option value="ABC">XYZ</mat-option>
+                <mat-option value="DEF">MPO</mat-option>
+              </mat-select>
+              <mat-error *ngIf="pe.invalid">{{getPeErrorMessage()}}</mat-error>
+            </mat-form-field>  
+            <div class="lineBreak">
+            <mat-form-field >
+              <mat-label>Project Type</mat-label>
+                <mat-select placeholder="Project Type" [formControl]="pt" required>
+                  <mat-option value="Select Project Type">--Select Project Type--</mat-option>
+                  <mat-option value="ABC">New Installation</mat-option>
+                  <mat-option value="DEF">Repair</mat-option>
+                </mat-select>
+                <mat-error *ngIf="pt.invalid">{{getPtErrorMessage()}}</mat-error>
+              </mat-form-field> 
+            <mat-form-field >
+              <mat-label>No.of Days</mat-label>
+              <input matInput placeholder="No.of Days" readonly required>
+            </mat-form-field> 
+           
+            <mat-form-field >
+              <mat-label>Status</mat-label>
+              <input matInput placeholder="Status" readonly required>
+            </mat-form-field>
+          </div>
+        </div>
+          </div>
+        </mat-card>
+          <app-tabs></app-tabs>
+</div>
+  <app-footer></app-footer>

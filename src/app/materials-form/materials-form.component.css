@@ -1,0 +1,41 @@
+
+ .main{
+  overflow: auto;
+  max-height: 555px;
+ } 
+  mat-form-field
+  {width: 187px;
+    display: inline-block;
+    margin-left: 7px;
+    margin-top: inherit;
+  }
+  .header{
+    margin-top: 2px;   
+  background-color: rgb(241, 241, 241);
+}
+  /* .formAlignmemnt{
+   margin-left: 35px;
+   margin-top: 0px;
+  } */
+
+  .mat-tab-label {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color: red;
+    font-weight: 700;
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color: red;
+    font-weight: 700;
+}
+
+/* Styles for the ink bar */
+.mat-ink-bar {
+    background-color: green;
+}
